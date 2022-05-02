@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-// import Axios from "axios";
+import styles from "./Login.module.css";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../../_actions/user_action";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function LoginPage(props) {
   const dispatch = useDispatch();
@@ -37,27 +37,36 @@ function LoginPage(props) {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-        height: "100vh",
-      }}
-    >
-      <form
-        style={{ display: "flex", flexDirection: "column" }}
-        onSubmit={onSubmitHandler}
-      >
-        <label>Email</label>
-        <input type="email" value={Email} onChange={onEmailHandler} />
-        <label>Password</label>
-        <input type="password" value={Password} onChange={onPasswordHandler} />
-        <br />
-        <button type="submit">Login</button>
-      </form>
-    </div>
+    <form onSubmit={onSubmitHandler}>
+      <div className={styles.background}>
+        <div className={styles.loginBox}>
+          <div className={styles.loginForm}>
+            <h1>로그인</h1>
+            <label>Email</label>
+            <input
+              className={styles.input}
+              type="Email"
+              onChange={onEmailHandler}
+              required
+            />
+            <label>Password</label>
+            <input
+              className={styles.input}
+              type="Password"
+              onChange={onPasswordHandler}
+              required
+            />
+            <button className={styles.button} type="submit">
+              로그인
+            </button>
+            <div>
+              <p>아직 계정이 없으신가요?</p>
+              <Link to="/register">회원가입</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
   );
 }
 

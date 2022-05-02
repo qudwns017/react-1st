@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -35,6 +35,18 @@ function LandingPage() {
       <h2>시작 페이지</h2>
 
       <button onClick={onClickHandler}>로그아웃</button>
+      <Link to="/login">
+        <button
+          style={{
+            margin: "5px",
+          }}
+        >
+          로그인 페이지로
+        </button>
+      </Link>
+      <Link to="/register">
+        <button>회원가입 페이지로</button>
+      </Link>
     </div>
   );
 }

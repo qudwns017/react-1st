@@ -44,10 +44,11 @@
   border-radius: 10px;
   width: 100px;
   height: 33px;
-  font-size: 18px;
+  font-size:18px;
 }
 
 .button:hover {
   transform: scale(1.05);
   transition: all 0.3s;
-}
+} 
+

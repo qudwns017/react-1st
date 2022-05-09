@@ -10,7 +10,7 @@
 
 .SignUpForm {
   width: 40%;
-  height:60%;
+  height: 60%;
   border: solid 3px purple;
   border-radius: 15px;
   z-index: 1;
@@ -55,7 +55,6 @@
   display: flex;
   border-radius: 10px;
   justify-content: space-around;
-  
 }
 
 .input {
@@ -65,4 +64,5 @@
   background-color: rgb(240, 240, 240);
   font-size: 18px;
   padding-left: 10px;
+  /* fkfkfk */
 }

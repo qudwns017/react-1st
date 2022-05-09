@@ -59,10 +59,11 @@ function RegisterPage() {
   return (
     <form onSubmit={onSubmitHandler}>
       <div className={styles.Box}>
+        <div className={styles.title}>회원가입</div>
         <div className={styles.Box}>
           <div className={styles.SignUpForm}>
             <div className={styles.info}>
-              이메일
+              이메일 입력란
               <input
                 type="email"
                 className={styles.input}

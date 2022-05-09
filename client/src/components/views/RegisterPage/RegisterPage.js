@@ -63,7 +63,7 @@ function RegisterPage() {
         <div className={styles.Box}>
           <div className={styles.SignUpForm}>
             <div className={styles.info}>
-              이메일 입력란
+              이메일
               <input
                 type="email"
                 className={styles.input}
